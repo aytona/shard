@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "shard-agent"
-version = "0.4.0"
+version = "1.0.0"
 description = "Composable infrastructure for governed, self-improving LLM agents"
 readme = "README.md"
 license = "Apache-2.0"
@@ -14,7 +14,7 @@ authors = [
 ]
 keywords = ["llm", "agents", "governance", "self-improvement", "multi-agent"]
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
