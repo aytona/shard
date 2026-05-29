@@ -80,7 +80,6 @@ shard/
 
 🚧 **Early development** — Spec documents are being written. Reference implementation follows.
 
-See the [research paper](https://arxiv.org/abs/XXXX.XXXXX) for the full theoretical foundation and evaluation.
 
 ## Roadmap
 
