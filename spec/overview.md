@@ -60,11 +60,3 @@ The key emergent property: when one subsystem detects a fault, the composition o
 Example: Memory Governance detects a stale dependency → Skill Lifecycle demotes affected skills → Coordination Protocol announces the capability change → Safety Constraints verify the demotion didn't violate bounds.
 
 No single subsystem "designed" this recovery. It emerges from their composition.
-
-## What SHARD Is Not
-
-- Not a new LLM or model
-- Not a new agent framework (it layers on existing ones)
-- Not a prompt engineering technique
-- Not a deployment case study
-- Not a central orchestrator that "decides everything"
