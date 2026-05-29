@@ -1,0 +1,2 @@
+"""SHARD gateway adapters."""
+
