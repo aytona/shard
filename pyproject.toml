@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "shard-agent"
-version = "0.1.0"
+version = "0.2.0"
 description = "Composable infrastructure for governed, self-improving LLM agents"
 readme = "README.md"
 license = "Apache-2.0"
@@ -21,7 +21,14 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
 [project.urls]
 Homepage = "https://github.com/aytona/shard"
 Documentation = "https://github.com/aytona/shard/tree/main/spec"
 Repository = "https://github.com/aytona/shard"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
