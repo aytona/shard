@@ -83,7 +83,7 @@ Modifications without a rollback record are rejected.
 
 ## Threat Model
 
-SHARD's self-improvement constraints defend against **degradation from poor optimization**, not adversarial attacks:
+SHARD's self-improvement constraints defend against **degradation from poor optimization**:
 
 | Threat | Defense |
 |--------|---------|
