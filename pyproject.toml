@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shard-agent"
+version = "0.1.0"
+description = "Composable infrastructure for governed, self-improving LLM agents"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "Christopher Aytona" }
+]
+keywords = ["llm", "agents", "governance", "self-improvement", "multi-agent"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/aytona/shard"
+Documentation = "https://github.com/aytona/shard/tree/main/spec"
+Repository = "https://github.com/aytona/shard"
