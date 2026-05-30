@@ -1,0 +1,35 @@
+{
+  "title": "SHARD: Self-Healing Agent with Resilient Delegation",
+  "description": "Four independent infrastructure components (persistent memory, scheduled automation, background delegation, and self-learning) compose to enable emergent behaviors—including self-healing, autonomous improvement, and multi-session orchestration—that none could produce alone. We present SHARD, an application architecture built on the MeshClaw framework, demonstrating how composable agent infrastructure enables robust autonomous operation without monolithic design.",
+  "upload_type": "preprint",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Aytona, Christopher",
+      "affiliation": "Independent Researcher",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "autonomous agents",
+    "multi-agent systems",
+    "self-healing systems",
+    "agent infrastructure",
+    "composable architecture",
+    "persistent memory",
+    "task delegation"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "subjects": [
+    {"term": "Artificial Intelligence", "identifier": "cs.AI"},
+    {"term": "Multi-Agent Systems", "identifier": "cs.MA"}
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/aytona/meshclaw-paper",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
