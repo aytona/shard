@@ -1,13 +1,14 @@
-cff-version: 1.1.0
+cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-authors:
-- family-names: Aytona
-  given-names: Christopher
+type: software
 title: "SHARD: Composable Infrastructure for Self-Healing, Persistent LLM Agents"
-version: v1.0-preprint
-date-released: 2026-05-30
+version: 1.0.0
+date-released: "2026-05-30"
 license: CC-BY-4.0
-repository-code: https://github.com/aytona/shard
+url: https://github.com/aytona/shard
+authors:
+  - family-names: Aytona
+    given-names: Christopher
 keywords:
   - autonomous agents
   - multi-agent systems
