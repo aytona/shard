@@ -1,5 +1,7 @@
 # SHARD
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
+
 **Self-Healing Agent with Resilient Delegation**
 
 A composable infrastructure layer that enables governed, self-improving LLM agents. SHARD provides four independent subsystems that, when composed, produce reliability and safety behaviors none could achieve alone.
