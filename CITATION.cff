@@ -1,0 +1,16 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Aytona
+  given-names: Christopher
+title: "SHARD: Composable Infrastructure for Self-Healing, Persistent LLM Agents"
+version: v1.0-preprint
+date-released: 2026-05-30
+license: CC-BY-4.0
+repository-code: https://github.com/aytona/shard
+keywords:
+  - autonomous agents
+  - multi-agent systems
+  - self-healing systems
+  - composable architecture
+abstract: "Four independent infrastructure components compose to enable emergent behaviors that none could produce alone."
