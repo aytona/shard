@@ -1,6 +1,6 @@
 # SHARD
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474860.svg)](https://doi.org/10.5281/zenodo.20474860)
 
 **Self-Healing Agent with Resilient Delegation**
 
@@ -55,6 +55,8 @@ SHARD is not tied to any specific agent framework. It communicates through typed
 
 ```
 shard/
+├── paper/                   # Published research paper
+│   └── SHARD_v1.pdf
 ├── spec/                    # Protocol specifications
 │   ├── overview.md
 │   ├── memory-governance.md
@@ -62,36 +64,41 @@ shard/
 │   ├── skill-lifecycle.md
 │   ├── self-improvement.md
 │   └── composition.md
-├── src/shard/               # Python reference implementation
+├── src/shard/               # Reference implementation
 │   ├── memory.py
 │   ├── coordination.py
 │   ├── skills.py
-│   ├── improvement.py
 │   ├── safety.py
 │   └── composition.py
 ├── src/adapters/            # Gateway adapter interfaces
-│   ├── base.py
-│   └── generic_mcp.py
-├── tests/
+│   └── base.py
+├── tests/                   # Mechanism validation tests
+│   ├── test_memory.py
+│   ├── test_coordination.py
+│   ├── test_composition.py
+│   ├── test_skills.py
+│   ├── test_safety.py
+│   └── test_adapters.py
 ├── examples/
+│   └── quickstart.py
 ├── pyproject.toml
+├── CITATION.cff
 └── LICENSE
 ```
 
 ## Status
 
-🚧 **Early development** — Spec documents are being written. Reference implementation follows.
-
+✅ **Paper published** — Spec documents complete. Validation tests passing. Reference implementation in progress.
 
 ## Roadmap
 
-| Version | Scope |
-|---------|-------|
-| v0.1 | Spec documents + safety constraints |
-| v0.2 | + Memory governance implementation |
-| v0.3 | + Coordination protocol |
-| v0.4 | + Skill lifecycle |
-| v1.0 | Full composition + adapter interface |
+| Milestone | Status |
+|-----------|--------|
+| Spec documents (4 subsystems + composition) | ✅ Complete |
+| Research paper (benchmarks + findings) | ✅ Published |
+| Mechanism validation tests | ✅ Passing |
+| Reference implementation (`src/shard/`) | ✅ Complete |
+| Gateway adapter interface (`src/adapters/`) | ✅ Complete |
 
 ## License
 
