@@ -1,6 +1,6 @@
 # SHARD
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474860.svg)](https://doi.org/10.5281/zenodo.20474860)
 
 **Self-Healing Agent with Resilient Delegation**
 
@@ -64,6 +64,14 @@ shard/
 │   ├── skill-lifecycle.md
 │   ├── self-improvement.md
 │   └── composition.md
+├── src/shard/               # Reference implementation
+│   ├── memory.py
+│   ├── coordination.py
+│   ├── skills.py
+│   ├── safety.py
+│   └── composition.py
+├── src/adapters/            # Gateway adapter interfaces
+│   └── base.py
 ├── tests/                   # Mechanism validation tests
 │   ├── test_memory.py
 │   ├── test_coordination.py
@@ -89,8 +97,8 @@ shard/
 | Spec documents (4 subsystems + composition) | ✅ Complete |
 | Research paper (benchmarks + findings) | ✅ Published |
 | Mechanism validation tests | ✅ Passing |
-| Reference implementation (`src/shard/`) | 🚧 In progress |
-| Gateway adapter interface (`src/adapters/`) | 📋 Planned |
+| Reference implementation (`src/shard/`) | ✅ Complete |
+| Gateway adapter interface (`src/adapters/`) | ✅ Complete |
 
 ## License
 
