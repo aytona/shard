@@ -25,7 +25,7 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                 Agent Harness                   │
+│                 Agent Harness                    │
 ├─────────────────────────────────────────────────┤
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐    │
 │  │  Memory   │  │  Coord    │  │   Skill   │    │
@@ -80,7 +80,7 @@ shard/
 
 ## Status
 
-✅ **Paper published** — Spec documents complete. Validation tests passing. Reference implementation in progress.
+✅ **Paper published** — All milestones complete. 83 mechanism validation tests passing. Reference implementation and adapter interface ready for integration.
 
 ## Roadmap
 
@@ -89,8 +89,8 @@ shard/
 | Spec documents (4 subsystems + composition) | ✅ Complete |
 | Research paper (benchmarks + findings) | ✅ Published |
 | Mechanism validation tests | ✅ Passing |
-| Reference implementation (`src/shard/`) | 🚧 In progress |
-| Harness adapter interface (`src/adapters/`) | 📋 Planned |
+| Reference implementation (`src/shard/`) | ✅ Complete (83 tests passing) |
+| Harness adapter interface (`src/adapters/`) | ✅ Complete |
 
 ## License
 
