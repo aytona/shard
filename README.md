@@ -1,6 +1,6 @@
 # SHARD
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474860.svg)](https://doi.org/10.5281/zenodo.20474860)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
 
 **Self-Healing Agent with Resilient Delegation**
 
@@ -8,7 +8,7 @@ A composable infrastructure layer that enables governed, self-improving LLM agen
 
 ## What is SHARD?
 
-SHARD sits between an LLM agent gateway and the agent's operational environment. It adds:
+SHARD is an **agent harness** — a persistent runtime layer that manages one or more LLM-backed agents, providing session lifecycle, tool dispatch, memory persistence, scheduling, multi-agent coordination, and fault recovery, independent of the underlying model. It sits between the harness's execution environment and the agent's operational context, adding:
 
 - **Memory Governance** — Staleness detection, conflict resolution, and validation for persistent agent memory
 - **Intent-Based Coordination** — DECLARE→REVIEW→EXECUTE protocol for multi-agent collaboration
@@ -25,7 +25,7 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                 Agent Gateway                   │
+│                 Agent Harness                    │
 ├─────────────────────────────────────────────────┤
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐    │
 │  │  Memory   │  │  Coord    │  │   Skill   │    │
@@ -41,9 +41,9 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 └─────────────────────────────────────────────────┘
 ```
 
-## Gateway Agnostic
+## Harness Agnostic
 
-SHARD is not tied to any specific agent framework. It communicates through typed read/write protocols (composition interfaces) that any gateway can implement. Public examples of compatible gateways include:
+SHARD is not tied to any specific agent harness or framework. It communicates through typed read/write protocols (composition interfaces) that any harness can implement. Public examples of compatible harnesses include:
 
 - [OpenClaw](https://github.com/nousresearch/openclaw)
 - [AutoGen](https://github.com/microsoft/autogen) (Microsoft)
@@ -64,14 +64,6 @@ shard/
 │   ├── skill-lifecycle.md
 │   ├── self-improvement.md
 │   └── composition.md
-├── src/shard/               # Reference implementation
-│   ├── memory.py
-│   ├── coordination.py
-│   ├── skills.py
-│   ├── safety.py
-│   └── composition.py
-├── src/adapters/            # Gateway adapter interfaces
-│   └── base.py
 ├── tests/                   # Mechanism validation tests
 │   ├── test_memory.py
 │   ├── test_coordination.py
@@ -97,8 +89,8 @@ shard/
 | Spec documents (4 subsystems + composition) | ✅ Complete |
 | Research paper (benchmarks + findings) | ✅ Published |
 | Mechanism validation tests | ✅ Passing |
-| Reference implementation (`src/shard/`) | ✅ Complete |
-| Gateway adapter interface (`src/adapters/`) | ✅ Complete |
+| Reference implementation (`src/shard/`) | 🚧 In progress |
+| Harness adapter interface (`src/adapters/`) | 📋 Planned |
 
 ## License
 
