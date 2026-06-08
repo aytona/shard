@@ -1,6 +1,6 @@
 # SHARD
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474819.svg)](https://doi.org/10.5281/zenodo.20474819)
 
 **Self-Healing Agent with Resilient Delegation**
 
@@ -25,7 +25,7 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                 Agent Harness                   │
+│                 Agent Harness                    │
 ├─────────────────────────────────────────────────┤
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐    │
 │  │  Memory   │  │  Coord    │  │   Skill   │    │
