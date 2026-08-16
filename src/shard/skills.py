@@ -58,6 +58,7 @@ class SkillRecord:
     demoted_at: Optional[float] = None
     retired: bool = False
     retirement_reason: Optional[str] = None
+    metadata: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -128,6 +129,7 @@ class SkillLifecycle:
             description=candidate.description,
             source=candidate.source,
             trust_tier=TrustTier.T1_SANDBOXED,
+            metadata=candidate.metadata,
         )
         self._skills[skill_id] = record
         return GateResult.PASSED, skill_id
