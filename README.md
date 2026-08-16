@@ -1,6 +1,7 @@
 # SHARD
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474820.svg)](https://doi.org/10.5281/zenodo.20474820)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20474819.svg)](https://doi.org/10.5281/zenodo.20474819)
+[![SSRN](https://img.shields.io/badge/SSRN-6898739-blue)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6898739)
 
 **Self-Healing Agent with Resilient Delegation**
 
