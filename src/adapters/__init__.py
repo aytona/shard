@@ -1,2 +1,1 @@
-"""SHARD gateway adapters."""
-
+"""SHARD harness adapters."""

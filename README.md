@@ -9,7 +9,7 @@ A composable infrastructure layer that enables governed, self-improving LLM agen
 
 ## What is SHARD?
 
-SHARD sits between an LLM agent gateway and the agent's operational environment. It adds:
+SHARD is an **agent harness** — a persistent runtime layer that manages one or more LLM-backed agents, providing session lifecycle, tool dispatch, memory persistence, scheduling, multi-agent coordination, and fault recovery, independent of the underlying model. It sits between the harness's execution environment and the agent's operational context, adding:
 
 - **Memory Governance** — Staleness detection, conflict resolution, and validation for persistent agent memory
 - **Intent-Based Coordination** — DECLARE→REVIEW→EXECUTE protocol for multi-agent collaboration
@@ -26,7 +26,7 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                 Agent Gateway                   │
+│                 Agent Harness                    │
 ├─────────────────────────────────────────────────┤
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐    │
 │  │  Memory   │  │  Coord    │  │   Skill   │    │
@@ -42,9 +42,9 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 └─────────────────────────────────────────────────┘
 ```
 
-## Gateway Agnostic
+## Harness Agnostic
 
-SHARD is not tied to any specific agent framework. It communicates through typed read/write protocols (composition interfaces) that any gateway can implement. Public examples of compatible gateways include:
+SHARD is not tied to any specific agent harness or framework. It communicates through typed read/write protocols (composition interfaces) that any harness can implement. Public examples of compatible harnesses include:
 
 - [OpenClaw](https://github.com/nousresearch/openclaw)
 - [AutoGen](https://github.com/microsoft/autogen) (Microsoft)
@@ -56,6 +56,10 @@ SHARD is not tied to any specific agent framework. It communicates through typed
 
 ```
 shard/
+├── paper/                   # Published research paper
+│   ├── SHARD_v1.pdf         # Original publication (Zenodo)
+│   ├── SHARD_v2.pdf         # Revised version (SSRN)
+│   └── src/                 # LaTeX source for arXiv
 ├── spec/                    # Protocol specifications
 │   ├── overview.md
 │   ├── memory-governance.md
@@ -63,36 +67,44 @@ shard/
 │   ├── skill-lifecycle.md
 │   ├── self-improvement.md
 │   └── composition.md
-├── src/shard/               # Python reference implementation
-│   ├── memory.py
-│   ├── coordination.py
-│   ├── skills.py
-│   ├── improvement.py
-│   ├── safety.py
-│   └── composition.py
-├── src/adapters/            # Gateway adapter interfaces
-│   ├── base.py
-│   └── generic_mcp.py
-├── tests/
+├── src/shard/               # Reference implementation (1,133 LOC)
+│   ├── memory.py            # Memory governance + staleness detection
+│   ├── coordination.py      # Intent-based DECLARE→REVIEW→EXECUTE
+│   ├── skills.py            # Quality-gated skill lifecycle (4 gates, 4 tiers)
+│   ├── safety.py            # Rate limiter, scope guard, rollback registry
+│   └── composition.py       # Cross-subsystem composition interfaces
+├── src/adapters/            # Harness adapter interface
+│   └── base.py              # Abstract base contract (93 LOC)
+├── tests/                   # Mechanism validation (83 tests passing)
+│   ├── test_memory.py
+│   ├── test_coordination.py
+│   ├── test_composition.py
+│   ├── test_skills.py
+│   ├── test_safety.py
+│   ├── test_adapters.py
+│   └── test_t4_accelerated.py
 ├── examples/
+│   └── quickstart.py
 ├── pyproject.toml
+├── CITATION.cff
 └── LICENSE
 ```
 
 ## Status
 
-🚧 **Early development** — Spec documents are being written. Reference implementation follows.
-
+✅ **Production validated** — 27 months of continuous single-operator deployment. 500 self-improvement experiments completed. 159 skills under governance. 31 agents coordinated. 83 mechanism validation tests passing. Reference implementation and adapter interface complete.
 
 ## Roadmap
 
-| Version | Scope |
-|---------|-------|
-| v0.1 | Spec documents + safety constraints |
-| v0.2 | + Memory governance implementation |
-| v0.3 | + Coordination protocol |
-| v0.4 | + Skill lifecycle |
-| v1.0 | Full composition + adapter interface |
+| Milestone | Status |
+|-----------|--------|
+| Spec documents (4 subsystems + composition) | ✅ Complete |
+| Research paper (benchmarks + findings) | ✅ Published ([Zenodo](https://doi.org/10.5281/zenodo.20474819), [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6898739)) |
+| Mechanism validation tests | ✅ 83 tests passing |
+| Reference implementation (`src/shard/`) | ✅ Complete (1,133 LOC) |
+| Harness adapter interface (`src/adapters/`) | ✅ Complete |
+| Production deployment validation | ✅ 27 months continuous operation |
+| arXiv submission (LaTeX, v2 terminology) | 🚧 In progress |
 
 ## License
 
