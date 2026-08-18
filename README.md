@@ -25,7 +25,7 @@ SHARD is built on the principle that coherent agent behavior arises from the int
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                 Agent Harness                    │
+│                 Agent Harness                   │
 ├─────────────────────────────────────────────────┤
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐    │
 │  │  Memory   │  │  Coord    │  │   Skill   │    │
